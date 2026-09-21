@@ -1,0 +1,47 @@
+{
+    "name": "misakstvanu/laravel-zsso-client",
+    "description": "Laravel client for zSSO: Socialite driver, login routes, token storage, integration calls and webhooks.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.3",
+        "guzzlehttp/guzzle": "^7.9",
+        "laravel/framework": "^12.0|^13.0",
+        "laravel/socialite": "^5.18",
+        "lcobucci/jwt": "^5.4"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0|^11.0",
+        "pestphp/pest": "^4.0|^5.0",
+        "skautis/skautis": "^2.3"
+    },
+    "suggest": {
+        "skautis/skautis": "Hydrate a SkautIS SOAP client from the session zSSO holds (SkautisSessionData::applyTo(), contract C-5)."
+    },
+    "autoload": {
+        "psr-4": {
+            "Misakstvanu\\ZssoClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Misakstvanu\\ZssoClient\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Misakstvanu\\ZssoClient\\ZssoClientServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "version": "0.1.0"
+}
